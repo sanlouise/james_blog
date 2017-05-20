@@ -14,6 +14,12 @@
     </div>
   <% end %>
 
+  <div class="file-field input-field">
+    <%= f.label :cover_image %><br>
+    <%= f.file_field :cover_image, accept: 'image/jpeg,image/gif,image/png' %>
+    <br>
+  </div>
+
   <div class="form-group">
     <%= f.input :title, class: "form-control" %>
   </div>
