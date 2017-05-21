@@ -9,7 +9,6 @@
 
 <div id="tf-content" class="layout-two">
   <div class="container">
-    
     <!-- New Post Link -->
     <div class="col-md-6 col-md-offset-3">
       <% if admin_signed_in? %>
@@ -21,35 +20,31 @@
       <%= will_paginate @posts %>
     </div>
 
-
     <div class="row">
-      
-        <% @posts.each do |post| %>
-          <%= link_to post_path(post) do %>
-            <div class="col-md-8 col-md-offset-2">
-              <div class="blog-post">
-                <div class="post-detail">
-                  <div class="img-wrap text-center">
-                    <%= image_tag(post.cover_image, class: "img-responsive") %>
-                  </div>
-                  <h2><%= post.title %></h2>
-                  <a href="#" class="meta-date">
-                    <span class="bolder"><%= post.created_at.strftime("%d") %></span>
-                    <%= post.created_at.strftime("%b") %>
-                  </a>
-                  <%= raw(post.body).truncate(300) %>
-                  <% if admin_signed_in? %>
-                    <%= link_to "Edit", edit_post_path(post), class: "btn btn-default" %>
-                    <%= link_to "Delete", post_path(post), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>
-                  <% end %>
-                  <hr />
+      <% @posts.each do |post| %>
+        <%= link_to post_path(post) do %>
+          <div class="col-md-8 col-md-offset-2">
+            <div class="blog-post">
+              <div class="post-detail">
+                <div class="img-wrap text-center">
+                  <%= image_tag(post.cover_image, class: "img-responsive") %>
                 </div>
+                <h2><%= post.title %></h2>
+                <a href="#" class="meta-date">
+                  <span class="bolder"><%= post.created_at.strftime("%d") %></span>
+                  <%= post.created_at.strftime("%b") %>
+                </a>
+                <%= raw(post.body).truncate(300) %>
+                <% if admin_signed_in? %>
+                  <%= link_to "Edit", edit_post_path(post), class: "btn btn-default" %>
+                  <%= link_to "Delete", post_path(post), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>
+                <% end %>
+                <hr />
+              </div>
             </div>
           </div>
-          <% end %>
         <% end %>
-
+      <% end %>
     </div>
   </div>
 </div>
-

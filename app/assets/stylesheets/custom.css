@@ -1,0 +1,343 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+.well {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  background-color: #b3d9ff;
+}
+
+.form-control {
+  background-color: white !important;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+.white-bg {
+  background: #ffffff;
+}
+
+hr {
+  border-color: #BE834A;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: -7px;
+}
+
+.sidebar {
+  background-color: white;
+}
+
+.sidebar-img {
+  max-height: 150px;
+  width: auto;
+  text-align: center;
+  margin: auto;
+}
+
+.cosmetics-header {
+  letter-spacing: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cosmetics-categories {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.cosmetics-explanation-title {
+  margin-top: 40px !important;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+//New contact button about page
+.col-md-6.col-md-push-3 {
+  margin-bottom: 20px;
+}
+
+//New cosmetics review button
+.text-center.col-lg-6.col-lg-offset-3.col-md-6.col-md-offset-3.col-sm-12.col-xs-12 {
+  margin-top: 20px;
+}
+
+//For youtube videos
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.blog-post {
+  border: 0;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.choose-cosmetics {
+  margin-bottom: 30px !important;
+}
+
+.uncondensed {
+  letter-spacing: 0px !important;
+}
+
+.white {
+  color: white !important;
+}
+
+.no-markup {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.no-markup:hover {
+  text-decoration: none !important;
+  color: white !important;
+  background-color: none !important;
+}
+
+.cosmetics-button {
+  font-size: 25px;
+  padding: 10 10 10 10;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  border-radius: 0px;
+}
+
+.cosmetics-button:hover {
+  background: #BE834A;
+  border: 2px solid #BE834A;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+// End cosmetics index listing
+// Dropdown menu cosmetics
+@media screen and (max-width: 480px) {
+  .dropdown-menu>li>a {
+    color: white !important;
+    text-align: center;
+  }
+}
+
+;
+// End dropdown menu cosmetics
+.search-caption {
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+
+.image-centered {
+  text-align: center !important;
+}
+
+.back {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.dropdown-menu a {
+  &:hover {
+    color: black !important;
+  }
+}
+
+.new-btn {
+  text-transform: uppercase;
+  background-color: #43a047;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 0;
+  padding: 7px 35px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+
+.new-btn:hover{
+  color: white;
+  background-color: #2e7d32;
+}
+
+.edit-btn {
+  text-transform: uppercase;
+  background-color: #0288d1;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 0;
+  padding: 7px 35px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+
+.edit-btn:hover{
+  color: white;
+  background-color: #0d47a1;
+}
+
+.delete-btn {
+  text-transform: uppercase;
+  background-color: #d32f2f;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 0;
+  padding: 7px 35px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+
+.delete-btn:hover{
+  color: white;
+  background-color: #b71c1c;
+}
+
+.with-padding {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-bottom: 2px;
+}
+
+.back-btn {
+  text-transform: uppercase;
+  background-color: #BE834A;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 0;
+  padding: 7px 35px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: block;
+  width: 30%;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+
+.back-btn:hover{
+  color: white;
+  background-color: #6d4c41;
+}
+
+.row.text-center.padding-top {
+  padding-top: 70px;
+}
+
+.sign-in {
+  padding-top: 40px;
+}
+
+.reviews-header {
+  margin: 20px 20px 20px 20px !important;
+  width: 60%;
+}
+
+.half-btn {
+  max-width: 50%;
+  display: inline-block;
+}
+
+.post-detail h2 {
+  font-size: 20px;
+}
+
+.sidebar {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.widget .post-content {
+  padding-top: 50px;
+}
+
+.widget .post-content p {
+  padding-top: 30px;
+}
+
+.thumb-post {
+  margin-bottom: 20px;
+}
+
+.thumb-post:hover {
+  opacity: 0.9;
+}
+
+.widget-product:hover {
+  opacity: 0.9;
+}
