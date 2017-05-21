@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170520150807) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
+    t.string   "summary"
     t.string   "body"
     t.string   "cover_image"
     t.datetime "created_at",  null: false

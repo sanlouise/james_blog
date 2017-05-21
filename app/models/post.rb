@@ -1,7 +1,9 @@
 class Post < ActiveRecord::Base
   # Validations
   validates :title, presence: true, length: { maximum: 150 }
+  validates :summary, presence: true, length: { maximum: 300 }
   validates :body, presence: true, length: { maximum: 500_000 }
+
 
   mount_uploader :cover_image, ImageUploader
   validates :cover_image, presence: true

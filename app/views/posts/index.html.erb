@@ -34,7 +34,9 @@
                   <span class="bolder"><%= post.created_at.strftime("%d") %></span>
                   <%= post.created_at.strftime("%b") %>
                 </a>
-                <%= raw(post.body).truncate(300) %>
+
+                <p><%= post.summary %></p>
+                
                 <% if admin_signed_in? %>
                   <%= link_to "Edit", edit_post_path(post), class: "btn btn-default" %>
                   <%= link_to "Delete", post_path(post), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>
