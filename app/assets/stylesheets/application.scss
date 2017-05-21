@@ -16,3 +16,19 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+html {
+  position: relative;
+  min-height: 100% !important;
+}
+body {
+  /* Margin bottom by footer height */
+  font-family: "Roboto";
+  margin-bottom: 60px !important;
+  background-color: white;
+}
+.bottom-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
