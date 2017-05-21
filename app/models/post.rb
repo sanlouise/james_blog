@@ -5,5 +5,4 @@ class Post < ActiveRecord::Base
 
   mount_uploader :cover_image, ImageUploader
   validates :cover_image, presence: true
-
 end

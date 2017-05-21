@@ -8,10 +8,12 @@
 /.bundle
 
 # Ignore the default SQLite database.
+/db/schema.rb
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
+/public/*
 /log/*
 /tmp/*
 !/log/.keep
