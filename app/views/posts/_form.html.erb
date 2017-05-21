@@ -1,36 +1,41 @@
-<%= simple_form_for @post do |f| %>
-  <% if @post.errors.any? %>
-    <div class="col-xs-12 text-center alert alert-warning" id="error_explanation" role="alert">
-      <h2>
-        <%= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:" %>
-      </h2>
-      <ul>
-        <% @post.errors.full_messages.each do |msg| %>
-          <li>
-            <%= msg %>
-          </li>
-          <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
 
-  <br />
+    <%= simple_form_for @post do |f| %>
+      <% if @post.errors.any? %>
+        <div class="col-xs-12 text-center alert alert-warning" id="error_explanation" role="alert">
+          <h2>
+            <%= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:" %>
+          </h2>
+          <ul>
+            <% @post.errors.full_messages.each do |msg| %>
+              <li>
+                <%= msg %>
+              </li>
+              <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-  <div class="file-field input-field">
-    <%= f.label :cover_image %><br>
-    <%= f.file_field :cover_image, accept: 'image/jpeg,image/gif,image/png' %>
-    <br>
+      <br />
+
+      <div class="file-field input-field">
+        <%= f.label :cover_image %><br>
+        <%= f.file_field :cover_image, accept: 'image/jpeg,image/gif,image/png' %>
+        <br>
+      </div>
+
+      <div class="form-group">
+        <%= f.input :title, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.input :body, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}}, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.button :submit %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="form-group">
-    <%= f.input :title, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.input :body, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}}, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>

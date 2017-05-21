@@ -39,7 +39,9 @@ class PostsController < ApplicationController
   end
 
   # The show action renders the individual post after retrieving the the id
-  def show; end
+  def show
+    @featured_posts = Post.all.shuffle.take(7)
+  end
 
   # The destroy action removes the post permanently from the database
   def destroy
