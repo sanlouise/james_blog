@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: %i[edit update show delete]
+  before_action :find_post, only: %i[edit update show destroy]
   before_action :authenticate_admin!, except: %i[index show]
 
   # Index action to render all posts
@@ -45,6 +45,9 @@ class PostsController < ApplicationController
 
   # The destroy action removes the post permanently from the database
   def destroy
+    puts '*'*60
+    puts @post
+    puts '*'*60
     if @post.destroy
       flash[:notice] = 'Successfully deleted post!'
       redirect_to posts_path
