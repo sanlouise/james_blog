@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  root 'posts#index'
+
+  get 'about', to: 'pages#about'
+
   devise_for :admins
+
   mount Ckeditor::Engine => '/ckeditor'
-  root to: 'posts#index'
 
   resources :posts
 end

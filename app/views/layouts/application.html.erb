@@ -9,8 +9,21 @@
 <body>
   <!-- Render navigation bar -->
   <%= render "layouts/navigation" %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
+  <% if notice %>
+    <div class="container alert alert-success alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <%= notice %>
+    </div>
+  <% end %>
+
+  <% if alert %>
+    <div class="container alert alert-danger alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <%= alert %>
+    </div>
+  <% end %>
+
   <div class="container-fluid">
     <%= yield %>
   </div>

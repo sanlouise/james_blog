@@ -1,25 +1,27 @@
-<div class="container">
-  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+<div class="row">
+  <div class="col-xs-12">
+    <% if admin_signed_in? %>
+      <div class="col-xs-12 text-center">
+        <%= link_to "New Article", new_post_path, class: "btn btn-primary btn-lg" %>
+      </div>
+      &nbsp;
+    <% end %>
     <% @posts.each do |post| %>
-    <div class="col-xs-12 text-center">
-      <div class="text-center">
-        <%= image_tag(post.cover_image) %>
-        <h2><%= post.title %></h2>
-        <h6><%= post.created_at.strftime('%b %d, %Y') %></h6>
-      </div>
-      <div>
-        <%= raw(post.body).truncate(358) %>
-      </div>
-      <div class="text-center">
-        <%= link_to "READ MORE", post_path(post) %>
-      </div>
-      <% if admin_signed_in? %>
-        <%= link_to "Show", post_path(post), class: "btn btn-primary" %>
-        <%= link_to "Edit", edit_post_path(post), class: "btn btn-default" %>
-        <%= link_to "Delete", post_path(post), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>
+      <%= link_to post_path(post) do %>
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <%= image_tag(post.cover_image) %>
+            <h2><%= post.title %></h2>
+            <h6><%= post.created_at.strftime('%b %d, %Y') %></h6>
+            <%= raw(post.body).truncate(358) %>
+            <% if admin_signed_in? %>
+              <%= link_to "Edit", edit_post_path(post), class: "btn btn-default" %>
+              <%= link_to "Delete", post_path(post), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>
+            <% end %>
+            <hr />
+          </div>
+        </div>
       <% end %>
-      <hr />
-    </div>
     <% end %>
   </div>
 </div>
