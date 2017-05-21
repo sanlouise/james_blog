@@ -24,12 +24,11 @@ gem 'will_paginate'
 
 group :development, :test do
   gem 'byebug'
-  gem 'sqlite3'
-  gem 'spring'
-  gem 'rubocop'
-  # Testing
   gem 'rspec-rails'
+  gem 'rubocop'
   gem 'shoulda-matchers'
+  gem 'spring'
+  gem 'sqlite3'
 end
 
 group :production do
