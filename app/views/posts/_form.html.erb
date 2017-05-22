@@ -20,7 +20,7 @@
       <br />
 
       <div class="file-field input-field">
-        <%= f.label :cover_image %><br>
+        <%= f.label :cover_image %><br/>
         <%= f.file_field :cover_image, accept: 'image/jpeg,image/gif,image/png' %>
         <br>
       </div>
@@ -30,6 +30,7 @@
       </div>
 
       <div class="form-group">
+        <%= f.label :summary %><br/>
         <%= f.text_area :summary, rows: 5, class: 'form-control' %>
       </div>
 
