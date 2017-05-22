@@ -7,7 +7,7 @@ end
 
 gem 'bootstrap-sass', '~> 3.3'
 gem 'carrierwave'
-gem 'ckeditor', '~> 4.1'
+gem 'ckeditor', '~> 4.1.6'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'jbuilder', '~> 2.5'
