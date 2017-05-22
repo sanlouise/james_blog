@@ -1,4 +1,4 @@
-<div class="col-sm-offset-4 col-sm-4 col-xs-12">
+<div class="well col-sm-offset-4 col-sm-4 col-xs-12">
   <h2 class="text-center">Log in</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form"}) do |f| %>
@@ -19,9 +19,13 @@
       </div>
     <% end %>
 
-    <%= f.submit "Log in", class: "btn btn-primary btn-lg" %>
+    <div class="text-center">
+      <%= f.submit "Log in", class: "btn btn-primary btn-lg" %>
+    </div>
   <% end %>
 
+  <div class="text-center">
+    <br/>
+    <%= render "admins/shared/links" %>
+  </div>
 </div>
-
-<%= render "admins/shared/links" %>
